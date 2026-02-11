@@ -16,7 +16,7 @@ def test_crypto_action_prediction() -> None:
         assert result == "Sell all your cryptocurrency"
 
     with (mock.patch("app.main.get_exchange_rate_prediction")
-          as mock_rate_prediction):
-        mock_rate_prediction.return_value = 0.0095
+           as mock_rate_prediction):
+        mock_rate_prediction.return_value = 95
         result = cryptocurrency_action(100)
         assert result == "Do nothing"
